@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Class</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+      padding-bottom: 100px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f8f0e3;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f8f0e3;
+      padding: 0.5rem;
+      border-radius: 5px;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    nav ul li:hover ul {
+      display: flex;
+    }
+
+    h1, h2 {
+      color: #5a2a83;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .main-content,
+    .about-text,
+    .read-more-text {
+      text-align: left;
+    }
+
+    .about-section,
+    .read-more-section {
+      display: flex;
+      padding: 2rem;
+      background-color: #fffaf5;
+    }
+
+    .about-section img,
+    .read-more-section img {
+      width: 50%;
+      border-radius: 10px;
+    }
+
+    .about-text,
+    .read-more-text {
+      width: 50%;
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .about-text h1,
+    .read-more-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p,
+    .read-more-text p {
+      font-size: 1rem;
+      color: #444;
+    }
+
+    .read-more {
+      align-self: flex-start;
+      margin-top: 1rem;
+      background-color: #e09f7d;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    .read-more-section {
+      display: none;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    .staff-section {
+      padding: 2rem 0;
+      background-color: #fffaf5;
+    }
+
+    .staff-section h2 {
+      color: #5a2a83;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .staff-list {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .staff-member {
+      width: 160px;
+    }
+
+    .staff-member img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid #e09f7d;
+    }
+
+    .staff-member h3 {
+      margin: 0.5rem 0 0.25rem;
+      font-size: 1.1rem;
+      color: #5a2a83;
+    }
+
+    .staff-member p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 2rem 0;
+    }
+
+    .image-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .image-item img {
+      width: 100px;
+      border-radius: 8px;
+    }
+
+    .image-item p {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #5a2a83;
+    }
+
+    .board {
+  background-color: #fdf6e3; /* warm light background */
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #4b3b2a;
+}
+
+.board h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #8b5e3c;
+  border-bottom: 2px solid #d6b790;
+  padding-bottom: 0.5rem;
+}
+
+.board ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.board ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.board h3 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  color: #7c4a27;
+}
+
+.board p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6b790;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.back-to-top:hover {
+  background-color: #c4a06b;
+}
+
+  </style>
+</head>
+
+<body>
+<audio id="bg-audio" autoplay loop>
+  <source src="music2.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="toolsjpg/logo.png.png" alt="Yarnmaster Studio Logo" style="height: 65px; margin-right: 10px;">
+      <h1 style="margin: 0; font-size: 1.5em; color: #7B3F00;">Yarnmaster Studio</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Classes</a>
+          <ul>
+            <li><a href="tools.html">Orientation & Tools</a></li>
+            <li><a href="skills.html">Basic Skills</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <img src="crochetclass.jpg" alt="Crochet materials">
+    <div class="about-text">
+      <div>
+        <h1>Crochet Class</h1>
+        <p>Welcome to our Crochet Class, where creativity meets comfort. Whether you're a beginner or looking to refresh your skills, our classes are designed to guide you through the relaxing and rewarding world of crochet.</p>
+        <p>Our Crochet Class offers a welcoming environment to explore your creativity and learn new skills. We provide detailed instruction on yarn types, hook sizes, and essential stitches. You'll also discover techniques for reading patterns and designing your own projects.</p>
+        <p>A crochet class is a hands-on educational session designed to teach individuals the fundamental skills and technique of crocheting. it typically caters to beginners who have little or no prior experience, guiding them through the basics such as understanding crochet tools, selecting appreciate materials, and mastering foundational stitches like the chain, single crochet and double crochet. Through step-by-step instruction, learners also develop the ability to read simple crochet patterns and apply their skills by completing beginner-friendly projects such as coasters, scarves, or granny squares. The class not only helps participations build fine motor skills and patience but also encourages creativity and relaxion. Whether delivered in-person or online, a crochet class provides a structured yet enjoyable learning environment that equips students with a lifelong skill and a gateway to the world of handmade crafts.</p>
+      </div>
+      <button class="read-more" onclick="toggleReadMore()">Read More</button>
+    </div>
+  </section>
+
+  <section class="read-more-section" id="readMoreSection">
+    <img src="crochetclass2.jpeg" alt="Crocheting in action">
+    <div class="read-more-text">
+      <h2>More About Crochet</h2>
+      <p>Crochet is a crafting method that involves using a hook to form fabric by intertwining loops of yarn, thread, or various other materials. The term originates from the French word "crochet," translating to "hook." It’s a well-liked technique for producing different products such as clothes, blankets, and accessories. Crochet involves using a hook to draw a loop of yarn through other loops, creating a fabric or item. Crochet hooks come in various sizes and materials, which affect the type of fabric and projects you can create. There are many different crochet stitches, each creating a unique texture and appearance. Many resources are available for learning crochet, including books, online tutorials, and classes. Starting with simpler projects like scarves, hats, or small squares is a good way to practice and build skills. Crochet patterns provide detailed instructions for creating specific projects, from basic to complex.</p>
+      <h2>Journey of Crochet</h2>
+      <p>What results from combining yarn, curiosity, and a group of amazing people? Our crochet course!</p>
+      <p>It began with a few hooks, some knotted yarn, and a set of novices who weren’t hesitant to lose a stitch. From those early shaky chains to vibrant, assured masterpieces, our path has been filled with joy, education, and many moments of "Wait, how do I do that again?" Whether you’re participating in our comfortable studio or online, our sessions focus on creativity, connection, and enjoyment with fiber. We instruct on everything from the fundamentals to sophisticated methods for when you’re prepared to advance. Some visit to unwind, some to create presents, and others simply to enjoy the positive energy and feel the yarn. Regardless of your motivation, you are invited to join us—fishing rod in hand and an open heart.</p>
+      <p>Knit alongside us, stumble with us, evolve with us. This is beyond just a class, it’s a vibrant small space of community.</p>
+    </div>
+  </section>
+
+  <section class="staff-section">
+    <h2>Meet Our Teaching Staff</h2>
+    <div class="staff-list">
+      <div class="staff-member">
+        <img src="staff1.jpeg"> 
+        <h3>NUR ALIYAH BINTI ABD MALEK</h3>
+        <p>Founder & Lead Instructor</p>
+      </div>
+      <div class="staff-member">
+        <img src="staff2.jpeg"> 
+        <h3>NUR AIZATUL AZWA BINTI RAHIM</h3>
+        <p>Intermediate Crochet Coach</p>
+      </div>
+      <div class="staff-member">
+        <img src="staff3.jpeg">
+        <h3>NUR SHAMEERA BINTI SHAHARIMAN</h3>
+        <p>Pattern Design Specialist</p>
+      </div>
+      <div class="staff-member">
+        <img src="staff4.jpeg">
+        <h3>AMALIA SYAZWANA BINTI ISMAIL</h3>
+        <p>Yarn & Tools Expert</p>
+      </div>
+      <div class="staff-member">
+        <img src="staff5.jpeg">
+        <h3>NIK NUR ASMAA DALIELA BINTI NIK MOHD FAKHRI</h3>
+        <p>Creative Projects Coach</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="board">
+    <h2>Mission of Crochet</h2>
+    <ul>
+      <li>We teach crochet. We build confidence.</li>
+      <li>Aim to make fiber arts welcoming, fun, and creatively rewarding.</li>
+      <li>Strive to make fiber arts accessible, enjoyable, and creatively fulfilling.</li>
+    </ul>
+  </section>
+
+  <section class="board">
+    <h2>Passion of Crochet</h2>
+    <h3>1) Warm & Sincere</h3>
+    <p>We’re present because we feel that crafting goes beyond being a pastime which is it serves as therapy, a form of self-expression, and occasionally even conceals companionship. We enjoy watching newcomers amaze themselves, learners discover their rhythm, and all participants leave feeling accomplished and a bit infatuated with yarn.</p>
+    <h3>2) Inspiring & Uplifting</h3>
+    <p>We are enthusiastic about establishing a place where creativity blends with expertise, allowing everyone to feel the serenity, assurance, and happiness that arises from building something completely original.</p>
+    <h3>3) Playful & Relatable</h3>
+    <p>We are dedicated to assisting others in discovering that same inspiration whether you seek skills, friendship, or simply the relaxed atmosphere and artistic tumult.</p>
+  </section> 
+
+  <script>
+    function toggleReadMore() {
+      const section = document.getElementById("readMoreSection");
+      const button = document.querySelector(".read-more");
+      if (section.style.display === "none" || section.style.display === "") {
+        section.style.display = "flex";
+        button.textContent = "Read Less";
+      } else {
+        section.style.display = "none";
+        button.textContent = "Read More";
+      }
+    }
+  </script>
+
+  <a href="#top" class="back-to-top">↑ Top</a>
+
+</body>
+
+  <footer style="text-align: center; padding: 20px; background-color: #f8f0e3;">
+		&copy; 2025. All rights reserved. </footer>
+</html>

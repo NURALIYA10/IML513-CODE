@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body style="background-image: url('toolsjpg/bgpic3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+  <title>Orientation & Tools | Crochet Class</title>
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #7B3F00;
+	  text-align: justify;
+	  line-height: 1.3;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f8f0e3;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f8f0e3;
+      padding: 0.5rem;
+      border-radius: 5px;
+      flex-direction: column;
+      z-index: 1000;
+    }
+    nav ul li:hover ul {
+      display: flex;
+    }
+    h1.title {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+      font-size: 2.5rem;
+      color: #000000;
+    }
+	h3 { 
+	 text-align: center;
+	} 
+    .tools-section {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2rem;
+    }
+    .tool-box {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      width: 45%;
+      margin-bottom: 2rem;
+    }
+    .tool-box img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .tool-box.reverse {
+      flex-direction: row-reverse;
+    }
+    .tool-text {
+      flex: 1;
+    }
+    .tool-text h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 768px) {
+      .tool-box, .tool-box.reverse {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+      }
+      .tool-box.reverse {
+        flex-direction: column;
+      }
+    }
+	.table-style {
+	  background-color: #c2b280;
+	  border-radius: 12px;
+	  padding: 1.5rem;  
+	}
+	.back-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #F5F5DC;
+      color: #333;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+	    font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    .back-button:hover { background-color: #d1c4b2; }
+    .back-icon { width: 40px; height: 40px; margin-right: 8px; text-align: center;}
+
+    .marquee-container {
+      position: relative;
+      width: 100%;
+      background-color: #c2b280;
+      color: #7B3F00;
+      font-size: 16px;
+      padding: 10px 0;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    .marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-text 40s linear infinite;
+    }
+    .marquee span { margin-right: 100px; }
+
+    @keyframes scroll-text {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+	
+    .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6b790;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.back-to-top:hover {
+  background-color: #c4a06b;
+}
+	</style>
+</head>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="toolsjpg/logo.png.png" alt="Yarnmaster Studio Logo" style="height: 65px; margin-right: 10px;">
+      <h1 style="margin: 0; font-size: 1.5em; color: #7B3F00;">Yarnmaster Studio</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Classes</a>
+          <ul>
+            <li><a href="tools.html">Orientation & Tools</a></li>
+            <li><a href="skills.html">Basic Skills</a></li>
+            <li><a href="practice.html">Practice</a></li>
+			<li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="marquee-container">
+    <div class="marquee">
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>	
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>				
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>				
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>			
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>
+		<span>Hi There, Curious About Crochet? Let’s Begin!🧶</span>	
+    </div>
+  </div>
+
+  <h1 class="title">Orientation & Tools</h1>
+
+  <div class="tools-section">
+    <div class="tool-box table-style">
+      <img src="toolsjpg/crochethook.jpg" alt="Crochet Hook">
+      <div class="tool-text">
+        <h3>Crochet Hook</h3>
+            <p>A crochet hook is a handheld tool used to make loops and pull yarn through them to create stitches. Hooks come in various sizes (measured in mm), and choosing the right size depends on the thickness of the yarn and the type of project. Common materials include metal, plastic, wood, or bamboo.</p>
+      </div>
+    </div>
+
+    <div class="tool-box table-style">
+      <img src="toolsjpg/yarn.jpg" alt="Yarn">
+      <div class="tool-text">
+        <h3>Yarn</h3>
+			<p>Yarn is the main material used in crochet. It is a long strand of fiber that comes in different weights (thicknesses), textures, and colors. Beginners usually start with medium-weight yarn (also called worsted weight) because it's easier to see stitches and manage tension.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tools-section alt-background">
+    <div class="tool-box reverse table-style">
+      <img src="toolsjpg/yarnsnip.jpg" alt="Yarn Snips">
+      <div class="tool-text">
+        <h3>Yarn Snips</h3>
+			<p>Yarn snips are small, sharp scissors specifically used for cutting yarn. They provide a clean, quick cut and are often more precise than regular scissors. Having a good pair of yarn snips is important for trimming ends and finishing off crochet projects neatly.</p>
+      </div>
+    </div>
+
+    <div class="tool-box reverse table-style">
+      <img src="toolsjpg/stitchmarker.jpg" alt="Stitch Marker">
+      <div class="tool-text">
+        <h3>Stitch Marker</h3>
+       <p>A stitch marker is a small clip or ring used to mark specific points in your crochet work. They are especially helpful for keeping track of the beginning of a round, pattern repeats, or stitch counts. Stitch markers can help prevent mistakes by giving you visual cues while you crochet.</p>
+      </div>
+    </div>
+  </div>
+<a href="#top" class="back-to-top">↑ Top</a>
+	</body>
+   <footer style="text-align: center; padding: 20px; background-color: #f8f0e3;">
+		&copy; 2025. All rights reserved. </footer>
+</html>

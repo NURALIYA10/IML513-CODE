@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Class | Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f8f0e3;
+      position: relative;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f8f0e3;
+      padding: 0.5rem;
+      border-radius: 5px;
+      flex-direction: column;
+      z-index: 1000;
+    }
+    nav ul li:hover ul {
+      display: flex;
+    }
+    .banner {
+      position: relative;
+      text-align: center;
+      background: url('yarn-hook.jpg') center/cover no-repeat;
+      height: 400px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .banner h1 {
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+    .banner a.button {
+      margin-top: 1rem;
+      background-color: #e09f7d;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .sections {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+      background-color: #fffaf5;
+    }
+    .card {
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .card h3 {
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Crochet Class</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Classes</a>
+          <ul>
+            <li><a href="tools.html">Orientation & Tools</a></li>
+            <li><a href="skills.html">Basic Skills</a></li>
+            <li><a href="practice.html">Practice</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Creating Comfort One Stitch at a Time</h1>
+    <a href="practice.html" class="button">Join a Class</a>
+  </section>
+
+  <section class="sections">
+    <a href="tools.html" class="card">
+      <img src="tools.jpg" alt="Orientation & Tools">
+      <h3>Orientation & Tools</h3>
+    </a>
+    <a href="skills.html" class="card">
+      <img src="skills.jpg" alt="Basic Skills">
+      <h3>Basic Skills</h3>
+    </a>
+    <a href="practice.html" class="card">
+      <img src="practice.jpg" alt="Practice">
+      <h3>Practice</h3>
+    </a>
+  </section>
+</body>
+</html>

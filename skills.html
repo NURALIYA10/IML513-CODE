@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Class | Basic Skills</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fefaf7;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f8f0e3;
+      border-bottom: 2px solid #ccc;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f8f0e3;
+      padding: 0.5rem;
+      border-radius: 5px;
+      flex-direction: column;
+      z-index: 1000;
+    }
+    nav ul li:hover ul {
+      display: flex;
+    }
+    .title-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1%;
+    }
+    .title-section h1 {
+      font-size: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .quiz-button {
+      background-color: #e0d6cf;
+      color: #333;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      background-color: #f2ebe5;
+      background-image: url('IML513 CODE/bgpic3.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 2rem;
+    }
+
+    .skill {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .skill:hover {
+      transform: scale(1.03);
+    }
+
+    .skill img,
+    .skill video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .skill-title {
+      margin: 1rem 0 0.5rem;
+      padding: 0.25rem 1rem;
+      border: 1px solid #333;
+      border-radius: 20px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .skill p {
+      text-align: justify;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;}
+
+ .back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6b790;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.back-to-top:hover {
+  background-color: #c4a06b;
+}
+
+     .marquee-container {
+      position: relative;
+      width: 100%;
+      background-color: #c2b280;
+      color: #7B3F00;
+      font-size: 16px;
+      padding: 10px 0;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    .marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-text 40s linear infinite;
+    }
+    .marquee span { margin-right: 100px; }
+
+    @keyframes scroll-text {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="toolsjpg/logo.png.png" alt="Yarnmaster Studio Logo" style="height: 65px; margin-right: 10px;">
+      <h1 style="margin: 0; font-size: 1.5em; color: #7B3F00;">Yarnmaster Studio</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Classes</a>
+          <ul>
+            <li><a href="tools.html">Orientation & Tools</a></li>
+            <li><a href="skills.html">Basic Skills</a></li>
+            <li><a href="practice.html">Practice</a></li>
+			<li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </header>
+
+  <div class="marquee-container">
+    <div class="marquee">
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>	
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>				
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>				
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>			
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>	
+    </div>
+  </div>
+
+  <section class="skills">
+    <div class="skill">
+      <img src="IML513 CODE/slipknot.jpg" alt="Slip Knot">
+      <div class="skill-title">Slip Knot</div>
+      <p>A slip knot is the starting point for most crochet projects. To make one, create a loop with the yarn, pull a strand through, and gently tighten it on the hook.</p>
+    </div>
+
+    <div class="skill">
+      <img src="IML513 CODE/chain.jpg" alt="Chain (ch)">
+      <div class="skill-title">Chain (ch)</div>
+      <p>After the slip knot, you create a series of loops (chains) by wrapping yarn over the hook and pulling it through the loop. It looks like a braided line and is used to start rows and create space.</p>
+    </div>
+
+    <div class="skill">
+      <img src="IML513 CODE/magic ring.jpg" alt="Magic Ring">
+      <div class="skill-title">Magic Ring</div>
+      <p>The magic ring is a technique used to start projects worked in the round, like hats. Once your first round of stitches is made, you pull the yarn tail to tighten the loop, leaving no hole in the center.</p>
+    </div>
+
+    <div class="skill">
+      <img src="IML513 CODE/single crochet.png" alt="Single Crochet">
+      <div class="skill-title">Single Crochet (sc)</div>
+      <p>This is one of the most basic crochet stitches. Insert the hook into the stitch, yarn over, pull through, yarn over again, and pull through both loops on the hook.</p>
+    </div>
+
+    <div class="skill">
+      <img src="IML513 CODE/half double crochet.png" alt="Half Double Crochet">
+      <div class="skill-title">Half Double Crochet (hdc)</div>
+      <p>Yarn over, insert hook, yarn over and pull through, yarn over again and pull through all three loops. It’s taller than single but shorter than double crochet.</p>
+    </div>
+
+    <div class="skill">
+      <img src="IML513 CODE/double crochet.png" alt="Double Crochet">
+      <div class="skill-title">Double Crochet (dc)</div>
+      <p>Yarn over, insert hook, yarn over and pull through, yarn over and pull through two loops twice. It creates a taller stitch used in many patterns.</p>
+    </div>
+
+    <div class="skill">
+      <img src="IML513 CODE/slip stitch.jpg" alt="Slip Stitch">
+      <div class="skill-title">Slip Stitch (sl st)</div>
+      <p>Used to join rounds or move across stitches. Insert hook, yarn over and pull through both the stitch and the loop on the hook in one motion.</p>
+    </div>
+
+    <div class="skill">
+      <video controls>
+        <source src="IML513 CODE/Increase.mp4" type="video/mp4">
+      </video>
+    <div class="skill-title">Increase</div>
+      <p>An increase adds stitches by working more than one stitch into the same space or stitch. It's used to shape projects.</p>
+    </div>
+
+    <div class="skill">
+      <video controls>
+        <source src="IML513 CODE/Decrease.mp4" type="video/mp4">
+      </video>
+    <div class="skill-title">Decrease</div>
+      <p>A decrease reduces stitches by combining two stitches into one. It's useful for shaping and tapering crochet pieces.</p>
+    </div>
+  </section>
+  <a href="#top" class="back-to-top">↑ Top</a>
+</body>
+<footer style="text-align: center; padding: 20px; background-color: #f8f0e3;">
+		&copy; 2025. All rights reserved. </footer>
+</html>

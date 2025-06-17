@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Class | Practice 2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fefaf7;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #f8f0e3;
+      border-bottom: 2px solid #ccc;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f8f0e3;
+      padding: 0.5rem;
+      border-radius: 5px;
+      flex-direction: column;
+    }
+    nav ul li:hover ul {
+      display: flex;
+      z-index: 10;
+    }
+    .title-section {
+      padding: 2rem;
+    }
+    .title-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .title-section h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      margin-top: 0;
+    }
+    .steps-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2rem;
+      background-color: #f2ebe5;
+    }
+    .step {
+      width: 22%;
+      background-color: #fff;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .step img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .step-title {
+      font-weight: bold;
+      margin: 1rem 0 0.5rem;
+    }
+    .step-desc {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .single-tutorial-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #d7c8be;
+      color: #333;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .marquee-container {
+      position: absolute;
+      width: 100%;
+      background-color: #c2b280;
+      color: #7B3F00;
+      font-size: 16px;
+      padding: 10px 0;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    .marquee {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-text 40s linear infinite;
+    }
+    .marquee span { margin-right: 100px; }
+
+    @keyframes scroll-text {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .pagination-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+    .pagination-buttons a button {
+      background-color: #d7c8be;
+      color: #333;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #d6b790;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.back-to-top:hover {
+  background-color: #c4a06b;
+}
+	
+  </style>
+</head>
+<body>
+  <header>
+      <div style="display: flex; align-items: center;">
+      <img src="toolsjpg/logo.png.png" alt="Yarnmaster Studio Logo" style="height: 65px; margin-right: 10px;">
+      <h1 style="margin: 0; font-size: 1.5em; color: #000000;">Yarnmaster Studio</h1>
+    </div>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="#">Classes</a>
+          <ul>
+            <li><a href="tools.html">Orientation & Tools</a></li>
+            <li><a href="skills.html">Basic Skills</a></li>
+            <li><a href="practice.html">Practice</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="marquee-container">
+    <div class="marquee">
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>	
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>				
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>				
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>			
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>
+		<span>Hi There, Hook and Play, Learn Today!🧶</span>	
+    </div>
+  </div>
+
+  <section class="title-section">
+    <h1>Practice 2</h1>
+    <h2><em>Crochet Scrunchie</em></h2>
+  </section>
+
+  <section class="steps-container">
+    <div class="step">
+      <img src="practice2-step1.jpg" alt="Step 1">
+      <div class="step-title">Step 1</div>
+      <div class="step-desc">Start with a slip knot and chain 12-15 or long enough to wrap around your scrunchie</div>
+    </div>
+    <div class="step">
+      <img src="practice2-step2.jpg" alt="Step 2">
+      <div class="step-title">Step 2</div>
+      <div class="step-desc">Crochet half double crochet (hdc) into each chain. This will create  a long strip</div>
+    </div>
+    <div class="step">
+      <img src="practice2-step3.jpg" alt="Step 3">
+      <div class="step-title">Step 3</div>
+      <div class="step-desc">Turn your work and repeat idc rows until the piece is wide enough to wrap around your hair elastic </div>
+    </div>
+    <div class="step">
+      <img src="practice2-step4.jpg" alt="Step 4">
+      <div class="step-title">Step 4</div>
+      <div class="step-desc">Place your crochet piece around a regular hair tie, then fold it in half to hide the hair tie inside</div>
+    </div>
+    <div class="step">
+      <img src="practice2-step5.jpg" alt="Step 5">
+      <div class="step-title">Step 5</div>
+      <div class="step-desc">Use a yarn needle to sew the edges closed. This will keep the scrunchie shape and hold everything in place</div>
+    </div>
+  </section>
+
+  <div class="pagination-buttons">
+    <a href="practice.html"><button>⟵ Previous</button></a>
+  </div>
+
+  <a href="tutorial2.html" class="single-tutorial-button">Tutorial</a>
+<a href="#top" class="back-to-top">↑ Top</a>
+</body>
+<footer style="text-align: center; padding: 20px; background-color: #f8f0e3;">
+		&copy; 2025. All rights reserved. </footer>
+</html>
+
+
